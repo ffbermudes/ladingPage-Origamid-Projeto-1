@@ -18,6 +18,11 @@ body{
     -webkit-font-smoothing: antialiased;
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+    margin: 0;
+}
+
+.upLetters{
+    font-size: 3rem;
 }
 
 .menu{
@@ -32,7 +37,7 @@ body{
 }
 .menu li a{
     display: block;
-    padding:10px;
+    padding:15px;
     margin:0 10px 0 0;
     color:#222;
     text-decoration: none;
@@ -41,6 +46,11 @@ body{
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: .1rem;
+}
+
+.ativo{
+    background-color:tomato;
+    border-radius: 3px;
 }
 
 .grid-section{
@@ -191,5 +201,14 @@ body{
     }
     .faq-lista, .dados, .mapa{
         grid-column: 1 / 3;
+    }
+    .grid-section h1{
+        font-size: 3rem;
+    }
+    .menu{
+        margin-top: 0px;
+    }
+    .copy{
+        margin-bottom: 0px;
     }
 }
