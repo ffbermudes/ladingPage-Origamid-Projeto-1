@@ -21,6 +21,17 @@ body{
     margin: 0;
 }
 
+.teste{
+    list-style: none;
+    max-width: 20%;
+    grid-column: 1/4;
+    margin:0 auto;
+}
+
+.teste img{
+    border-radius: 10px;
+}
+
 .upLetters{
     font-size: 3rem;
 }
