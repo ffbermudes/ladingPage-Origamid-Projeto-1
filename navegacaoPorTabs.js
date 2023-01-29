@@ -8,3 +8,11 @@ const tabContent = document.querySelectorAll(".js-tabcontent section");
 		});
 		tabContent[index].classList.add("ativo");
 	}
+
+//Adiciona evento de click nas imagens
+	tabMenu.forEach((li, index)=>{
+		console.log(li, index);
+		li.addEventListener("click", ()=>{
+			activeTab(index);
+		})
+	});
