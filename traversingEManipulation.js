@@ -3,6 +3,8 @@ console.log(lista.parentElement); //retorna o elemento pai do mesmo.
 console.log(lista.nextElementSibling); //retorna o próximo elemento no mesmo nível de parentesco ou não.
 console.log(lista.previousElementSibling);;//Retorna o elemento anterior no mesmo grau de parentesco ou não.
 
+//	Mostra todos elementos dentro da variável html inclusive comentários.
+console.log(lista.childNodes.length);
 
 console.log(lista.children); // HTMLColection com todos os seus filhos.
 
