@@ -41,18 +41,35 @@ function initAccordion(){
 }
 initAccordion();
 
-//todos links internos
-const linksInternos = document.querySelectorAll('.js-navMenu a[href^="#"]');
+function initScrollSuave(){
+	//todos links internos
+	const linksInternos = document.querySelectorAll('.js-navMenu a[href^="#"]');
 
-function scrollToSection(evento){
-	//Não permite o vinculo do link padrão dentro da página.
-		evento.preventDefault();
-	const caminhoHref = this.getAttribute('href');
-	const alturaSecao = document.querySelector(caminhoHref);
-	console.log(alturaSecao.offsetTop);
-	window.scrollTo(0, alturaSecao.offsetTop);
-};
+	// Função ativa através do evento de click.
+	function scrollToSection(event){
+		event.preventDefault();
 
-linksInternos.forEach((link)=>{
-	link.addEventListener('click', scrollToSection)
-});
+		//this é o elemento html clicado.
+			console.log(this);
+
+		//Pegando atributo href do elemento clicado.
+			const caminhoHref = this.getAttribute('href');
+			console.log(caminhoHref);
+
+		//Utilizando a string do href para selecionar elemento da página e pegando a propriedade desejada desse elemento capturado que é a altura do elemento até o topo.
+			const alturaSecao = document.querySelector(caminhoHref);
+			console.log(alturaSecao);
+
+		window.scrollTo({
+			top: alturaSecao.offsetTop,
+			behavior: 'smooth',
+		});
+	};
+
+	//inserindo evento de click em todos links da página e apontando para scrollToSection
+	linksInternos.forEach((link)=>{
+		link.addEventListener('click', scrollToSection);
+	});
+}
+
+initScrollSuave();
