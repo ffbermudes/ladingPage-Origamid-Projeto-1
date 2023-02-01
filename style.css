@@ -220,6 +220,12 @@ body{
 	}
 }
 
+@media (max-width: 896px){
+	.titulo{
+		font-size: 3rem;
+	}
+}
+
 /* Dinâmica com JS nas fotos dos animais */
 
 .js .js-tabcontent section{
@@ -280,4 +286,15 @@ body{
 	to{
 		opacity: 1;
 	}
+}
+
+.js .js-scroll{
+	opacity: 0;
+	transform: translate3d(-30px, 0, 0);
+}
+
+.js .js-scroll.ativo{
+	opacity: 1;
+	transition: .3s;
+	transform: translate3d(0, 0, 0);
 }
